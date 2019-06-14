@@ -1,10 +1,10 @@
-# 🕵 duplicate-package-checker-webpack-plugin
+# 🕵 clam-duplicate-package-checker-webpack-plugin
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status](https://travis-ci.org/darrenscerri/duplicate-package-checker-webpack-plugin.svg?branch=master)](https://travis-ci.org/darrenscerri/duplicate-package-checker-webpack-plugin)
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 
 Webpack plugin that warns when your bundle contains multiple versions of the same package.
 
-![duplicate-package-checker-webpack-plugin](https://raw.githubusercontent.com/darrenscerri/duplicate-package-checker-webpack-plugin/master/screenshot.png)
+![clam-duplicate-package-checker-webpack-plugin](https://raw.githubusercontent.com/kingback/clam-duplicate-package-checker-webpack-plugin/master/screenshot.png)
 
 ## Why?
 
@@ -17,7 +17,7 @@ Motivation: https://github.com/webpack/webpack/issues/385 and https://github.com
 ## Install
 
 ```sh
-npm install duplicate-package-checker-webpack-plugin --save-dev
+npm install clam-duplicate-package-checker-webpack-plugin --save-dev
 ```
 
 ## Configuration
@@ -25,7 +25,7 @@ npm install duplicate-package-checker-webpack-plugin --save-dev
 Add the plugin to your webpack config:
 
 ```js
-var DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
+var DuplicatePackageCheckerPlugin = require("clam-duplicate-package-checker-webpack-plugin");
 
 module.exports = {
   plugins: [new DuplicatePackageCheckerPlugin()]
@@ -125,12 +125,12 @@ If your project has a dependency and it's using an outdated version of a package
 
 ### Webpack 3.x
 
-`npm install duplicate-package-checker-webpack-plugin@^2.1.0 --save-dev`
+`npm install clam-duplicate-package-checker-webpack-plugin@^2.1.0 --save-dev`
 
 ### Webpack 4.x
 
-`npm install duplicate-package-checker-webpack-plugin`
+`npm install clam-duplicate-package-checker-webpack-plugin`
 
-[downloads-image]: https://img.shields.io/npm/dt/duplicate-package-checker-webpack-plugin.svg
-[npm-url]: https://www.npmjs.com/package/duplicate-package-checker-webpack-plugin
-[npm-image]: https://img.shields.io/npm/v/duplicate-package-checker-webpack-plugin.svg
+[downloads-image]: https://img.shields.io/npm/dt/clam-duplicate-package-checker-webpack-plugin.svg
+[npm-url]: https://www.npmjs.com/package/clam-duplicate-package-checker-webpack-plugin
+[npm-image]: https://img.shields.io/npm/v/clam-duplicate-package-checker-webpack-plugin.svg
