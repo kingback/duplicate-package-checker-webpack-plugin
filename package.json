@@ -26,17 +26,17 @@
   "repository": {
     "type": "git",
     "url":
-      "git+https://github.com/darrenscerri/duplicate-package-checker-webpack-plugin.git"
+      "git+https://github.com/kingback/duplicate-package-checker-webpack-plugin.git"
   },
   "keywords": ["webpack", "plugin"],
-  "author": "Darren Scerri <darrenscerri@gmail.com>",
+  "author": "kingback <ningzbruc@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url":
-      "https://github.com/darrenscerri/duplicate-package-checker-webpack-plugin/issues"
+      "https://github.com/kingback/duplicate-package-checker-webpack-plugin/issues"
   },
   "homepage":
-    "https://github.com/darrenscerri/duplicate-package-checker-webpack-plugin#readme",
+    "https://github.com/kingback/duplicate-package-checker-webpack-plugin#readme",
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
