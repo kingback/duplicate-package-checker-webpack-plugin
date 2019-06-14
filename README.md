@@ -1,4 +1,4 @@
-# 🕵 clam-duplicate-package-checker-webpack-plugin
+# clam-duplicate-package-checker-webpack-plugin
 
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 
