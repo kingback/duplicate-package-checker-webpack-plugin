@@ -4,7 +4,7 @@
 
 Webpack plugin that warns when your bundle contains multiple versions of the same package.
 
-![clam-duplicate-package-checker-webpack-plugin](https://raw.githubusercontent.com/kingback/clam-duplicate-package-checker-webpack-plugin/master/screenshot.png)
+![clam-duplicate-package-checker-webpack-plugin](https://raw.githubusercontent.com/kingback/duplicate-package-checker-webpack-plugin/master/screenshot.png)
 
 ## Why?
 
