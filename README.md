@@ -44,6 +44,9 @@ new DuplicatePackageCheckerPlugin({
   showHelp: false,
   // Warn also if major versions differ (default: true)
   strict: false,
+  // output duplicate-packages.json (default: false)
+  // or { path: path.join(process.cwd(), 'build'), filename: 'my-packages.json' }
+  output: true,
   /**
    * Exclude instances of packages from the results.
    * If all instances of a package are excluded, or all instances except one,

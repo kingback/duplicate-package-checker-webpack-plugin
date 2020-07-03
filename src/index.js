@@ -1,3 +1,4 @@
+var fs = require("fs");
 var path = require("path");
 var findRoot = require("find-root");
 var chalk = require("chalk");
@@ -76,6 +77,14 @@ DuplicatePackageCheckerPlugin.prototype.apply = function(compiler) {
   let emitError = this.options.emitError;
   let exclude = this.options.exclude;
   let strict = this.options.strict;
+  let output = this.options.output;
+
+  if (output === true) {
+    output = {
+      path: compiler.options.output.path,
+      filename: "duplicate-packages.json"
+    };
+  }
 
   compiler.hooks.emit.tapAsync("DuplicatePackageCheckerPlugin", function(
     compilation,
@@ -190,6 +199,11 @@ DuplicatePackageCheckerPlugin.prototype.apply = function(compiler) {
     const duplicateCount = Object.keys(duplicates).length;
 
     if (duplicateCount) {
+      let outputPath =
+        output &&
+        output.path &&
+        output.filename &&
+        path.join(output.path, output.filename);
       let array = emitError ? compilation.errors : compilation.warnings;
 
       let i = 0;
@@ -222,6 +236,16 @@ DuplicatePackageCheckerPlugin.prototype.apply = function(compiler) {
           error += `\n${chalk.white.bold(
             "Check how you can resolve duplicate packages: "
           )}\nhttps://github.com/kingback/duplicate-package-checker-webpack-plugin#resolving-duplicate-packages-in-your-bundle\n`;
+          if (outputPath) {
+            fs.writeFileSync(
+              outputPath,
+              JSON.stringify(duplicates, null, 2),
+              "utf-8"
+            );
+            error += `\n${chalk.white.bold(
+              "Check duplicate packages json: "
+            )}\n${chalk.green(outputPath)}\n`;
+          }
         }
         array.push(new Error(error));
       });
