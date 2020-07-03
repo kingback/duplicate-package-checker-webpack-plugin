@@ -1,6 +1,6 @@
 {
   "name": "clam-duplicate-package-checker-webpack-plugin",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "description": "Webpack plugin that warns you when multiple versions of the same package exist in a build.",
   "main": "./lib/index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "dependencies": {
     "chalk": "^2.3.0",
     "find-root": "^1.0.0",
-    "fs-extra": "^9.0.1",
+    "fs-extra": "^8.1.0",
     "lodash": "^4.17.4",
     "semver": "^5.4.1"
   },
