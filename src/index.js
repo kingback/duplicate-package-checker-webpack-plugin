@@ -1,4 +1,5 @@
 var fs = require("fs");
+var fse = require("fs-extra");
 var path = require("path");
 var findRoot = require("find-root");
 var chalk = require("chalk");
@@ -211,8 +212,8 @@ DuplicatePackageCheckerPlugin.prototype.apply = function(compiler) {
       let sortedDuplicateKeys = Object.keys(duplicates).sort();
 
       sortedDuplicateKeys.map(name => {
-        let instances = duplicates[name].sort(
-          (a, b) => (a.version < b.version ? -1 : 1)
+        let instances = duplicates[name].sort((a, b) =>
+          a.version < b.version ? -1 : 1
         );
 
         let error =
@@ -237,6 +238,7 @@ DuplicatePackageCheckerPlugin.prototype.apply = function(compiler) {
             "Check how you can resolve duplicate packages: "
           )}\nhttps://github.com/kingback/duplicate-package-checker-webpack-plugin#resolving-duplicate-packages-in-your-bundle\n`;
           if (outputPath) {
+            fse.ensureDirSync(output.path);
             fs.writeFileSync(
               outputPath,
               JSON.stringify(duplicates, null, 2),
